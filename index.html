@@ -30,7 +30,7 @@
 
   var listener = new ROSLIB.Topic({
     ros : ros,
-    name : '/rgbd_FBL/depth/image_raw/compressed/compressed',
+    name : '/orange/compressed/',
     messageType : 'sensor_msgs/CompressedImage'
   });
 
@@ -47,6 +47,8 @@
 <body>
   <h1>Robot's perspective</h1>
   <p>Looking through the eyes of a robot.</p>
-  <img id="image_sub" />
+  <code>Run the following in the terminal: rosrun image_transport republish raw in:=/rgbd_FBL/color/image_raw/ out:=/orange</code>
+  <br>
+  <img width="500px" id="image_sub" />
 </body>
 </html>
